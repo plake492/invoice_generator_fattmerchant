@@ -1,8 +1,8 @@
-const baseURL = "https://apidemo.fattlabs.com/";
+// const baseURL = "https://apidemo.fattlabs.com/";
 
-exports.default = {
+export default {
   getPastInvoices: function () {
-    return fetch(`${baseURL}item`, {
+    return fetch("https://apidemo.fattlabs.com/item", {
       method: "get",
       headers: new Headers({
         Authorization:
@@ -11,5 +11,8 @@ exports.default = {
         "Content-Type": "application/json",
       }),
     });
+  },
+  getImage: function () {
+    return fetch(`https://source.unsplash.com/600x400/?random`);
   },
 };
